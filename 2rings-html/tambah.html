@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Informasi</title>
+    <style>
+        /* CSS untuk tampilan halaman tambah informasi */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #965252;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .add-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .add-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .add-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .add-form label {
+            font-weight: bold;
+            width: 100px; /* Fixed width for labels */
+            display: inline-block; /* Allows labels to be on the same line as inputs */
+        }
+
+        .add-form input[type="text"],
+        .add-form input[type="number"],
+        .add-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #b71717;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        .add-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .add-form button:hover {
+            background-color: #2c6098;
+        }
+    </style>
+</head>
+<body>
+    <div class="add-container">
+        <h2>Tambah Informasi</h2>
+        <button id="toggleButton">Toggle Form</button>
+        <form class="add-form" action="blog.html" method="post" id="infoForm" style="display: none;">
+            <div class="form-group">
+                <label for="nama">NAMA:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="tipe">TIPE:</label>
+                <input type="text" id="tipe" name="tipe" required>
+            </div>
+            <div class="form-group">
+                <label for="status">STATUS:</label>
+                <input type="text" id="status" name="status" required>
+            </div>
+            <div class="form-group">
+                <label for="harga">HARGA:</label>
+                <input type="text" id="harga" name="harga" required>
+            </div>
+            <!-- More form fields here -->
+            <button type="submit">Tambah</button>
+        </form>
+    </div>
+    <script>
+        // JavaScript code to toggle the form visibility
+        const toggleButton = document.getElementById("toggleButton");
+        const infoForm = document.getElementById("infoForm");
+
+        toggleButton.addEventListener("click", function() {
+            if (infoForm.style.display === "none") {
+                infoForm.style.display = "block";
+            } else {
+                infoForm.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

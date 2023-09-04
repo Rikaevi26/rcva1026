@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Tampilan login */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcf8f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #f0f6f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #857016;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .login-form label {
+            font-weight: bold;
+            color: #333; /* Warna teks label */
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 12px; /* Lebih besar untuk meningkatkan kenyamanan pengguna */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            outline: none; /* Hilangkan border focus yang bawaan */
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        /* Efek hover pada input saat fokus */
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .remember-forgot label {
+            display: flex;
+            align-items: center;
+            color: #555; /* Warna teks label remember me */
+        }
+
+        .remember-forgot input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .login-form button {
+            background-color: #c0d825;
+            color: #ffffff; /* Warna teks tombol */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Efek hover pada tombol */
+        .login-form button:hover {
+            background-color: #062a18;
+        }
+
+        /* Tambahkan style untuk tautan lupa kata sandi */
+        .remember-forgot a {
+            text-decoration: none;
+            color: #1269dc;
+        }
+
+        /* Tambahkan style untuk tautan lupa kata sandi saat hover */
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" action="blog.html">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

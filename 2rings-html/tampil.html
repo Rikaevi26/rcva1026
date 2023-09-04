@@ -1,0 +1,24 @@
+<?php
+
+include 'koneksi.php';
+$connect	= new mysqli($hostname,$user,$pass,$database);
+
+$tampil 	= $connect->query("select * from yayaya");
+
+?>
+<button><a href="tambah.php">Tambah</a></button>
+<table border="1">
+	<tr>
+		<th>nama</th>
+		<th>tipe</th>
+		<th>status</th>
+        <th>harga</th>
+	</tr>
+<?php foreach($tampil as $baris){ ?>
+	<tr>
+		<td><?=$baris['nama']?></td>
+		<td><?=$baris['dekor']?></td>
+		<td><?=$baris['harga']?></td>
+	</tr>
+<?php }  ?>
+</table>
